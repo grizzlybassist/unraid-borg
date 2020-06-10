@@ -2,6 +2,7 @@
 unraid="/mnt/user"
 logs="$unraid/logs/borg-backup"
 mkdir -p $logs
+STATFILE="$logs/borg-stats.txt
 LOGFILE="$logs/borg-$(date +"%Y-%m-%d").txt"
 touch $LOGFILE
 
