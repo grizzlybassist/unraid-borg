@@ -1,5 +1,5 @@
 #!/bin/sh
-LOGFILE="/mnt/user/Cronjob/logs/borg-backup/borg-$(data "=%Y-%m-%d).txt"
+LOGFILE="/mnt/user/Cronjob/logs/borg-backup/borg-$(data "+%Y-%m-%d").txt"
 
 # Close if rclone/borg running
 if pgrep "borg" || pgrep "rclone" > /dev/null 
