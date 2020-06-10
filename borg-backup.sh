@@ -1,5 +1,9 @@
 #!/bin/sh
-LOGFILE="/mnt/user/Cronjob/logs/borg-backup/borg-$(data "+%Y-%m-%d").txt"
+unraid="/mnt/user"
+logs="$unraid/logs/borg-backup"
+mkdir -p $logs
+LOGFILE="$logs/borg-$(date +"%Y-%m-%d").txt"
+touch $LOGFILE
 
 # Close if rclone/borg running
 if pgrep "borg" || pgrep "rclone" > /dev/null 
