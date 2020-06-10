@@ -57,6 +57,7 @@ borg create                         \
     \
     $BORG_REPO::'{hostname}-{now}'  \
     \
+    /boot                           \
     /mnt/user/Cronjobs              \
     /mnt/user/Photos                \
     /mnt/user/kilefam               \
