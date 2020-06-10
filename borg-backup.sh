@@ -93,6 +93,7 @@ if [ ${global_exit} -eq 0 ];
 then
     borgstart=$SECONDS
     echo "$(date "+%m-%d-%Y %T") : Borg backup completed in  $(($borgstart/ 3600))h:$(($borgstart% 3600/60))m:$(($borgstart% 60))s" | tee -a >> $LOGFILE 2>&1
+    borg list $BORG_REPO > $STATFILE
 
 #Reset timer
     SECONDS=0
